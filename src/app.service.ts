@@ -2,7 +2,15 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getMain(): any {
+    return {
+      name: 'any-backend',
+      version: '0.0.1',
+      description: 'REST API with NESTJS',
+      author: 'fconcha & jmunozlo',
+    };
+  }
+  getHello(): object {
+    return { message: 'Hello from API V2' };
   }
 }
